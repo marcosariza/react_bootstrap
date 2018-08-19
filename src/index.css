@@ -1,0 +1,53 @@
+
+.border {
+    outline-color:red;
+    outline-style: solid;
+}
+
+.marco{
+      height: 100%;
+}
+
+
+.menu{
+      height: 10%;
+}
+
+.cuerpo{
+      height: 80%;
+}
+
+.pie{
+      height: 10%;
+}
+
+
+html, body, #app, #app>div {
+  height: 100%;
+  outline-color: red;
+  outline-style: solid;
+}
+
+
+.nav>li>span {
+  position: relative;
+   display: block;
+   padding: 10px 15px;
+   height: 100%;
+   padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.dropdown-menu>li>span {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+}
+
+.enviaralfondo {
+  z-index: -1;
+}

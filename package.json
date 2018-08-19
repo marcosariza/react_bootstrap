@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build",
-    "build": "webpack --config webpack.config.js -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --port 8080",
+    "build": "webpack --config webpack.config.js -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --port 8080 --host 0.0.0.0",
     "build:prod": "webpack --config webpack.config.js -p && cp src/index.html dist/index.html"
   },
   "keywords": [
@@ -19,7 +19,10 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2"
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.4.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
