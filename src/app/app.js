@@ -5,8 +5,8 @@ import {Grid, Row, Col} from 'react-bootstrap';
 
 // Para routing y manejo de ventanas:
 import {Router, Route, IndexRoute, Link} from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
-
+import createBrowserHistory from 'history/createBrowserHistory';
+import createMemoryHistory from 'history/createMemoryHistory';
 
 
 
@@ -22,7 +22,7 @@ import {Formvi} from './components/form/formvi';
 import {Formvd} from './components/form/formvd';
 import {Form2vi} from './components/form2/form2vi';
 import {Form2vd} from './components/form2/form2vd';
-const Pie = () => <h2>Pie2</h2>;
+const Pie = () => <h2><div>{memoryHistory.location.pathname}</div></h2>;
 // ************************************************ ******************* //
 
 
@@ -63,7 +63,12 @@ class Template extends Component {
     }
   }
 
-  const history = createBrowserHistory();
+  // Formas de registrar el historial de URL en react-router:
+  // En el navegador:
+  const historyURL = createBrowserHistory();
+  // En un objeto de memoria:
+  const memoryHistory = createMemoryHistory();
+
   class App extends Component {
     render() {
 
@@ -75,7 +80,8 @@ class Template extends Component {
 // ****************************************************************** //
 
       return (
-      <Router history={history}>
+      // <Router history={historyURL}>
+      <Router history={memoryHistory}>
         <div>
           {/* *******************3 mapeo de variables a ruta********************** */}
           <Route exact path="/" render={() => ( <Template {...propsHome} />)} />
