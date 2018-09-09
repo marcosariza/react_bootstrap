@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import BootstrapTable from 'react-bootstrap-table-next';
 
 class Gridvd extends Component {
   constructor(props) {
@@ -8,8 +8,21 @@ class Gridvd extends Component {
   };
 
   render() {
-    return (<div className="App">
-      <h2>Ventana Derecha GRID</h2>
+    const products = [{id:'123', name: 'Marcos', price: 100}, {id:'123', name: 'Marcos', price: 100}];
+    const columns = [
+      {
+        dataField: 'id',
+        text: 'Product ID'
+      }, {
+        dataField: 'name',
+        text: 'Product Name'
+      }, {
+        dataField: 'price',
+        text: 'Product Price'
+      }
+    ];
+    return (<div>
+      <BootstrapTable keyField='id' data={products} columns={columns}/>
     </div>)
   }
 }

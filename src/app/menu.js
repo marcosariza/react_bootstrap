@@ -25,9 +25,18 @@ class Menu extends Component {
             <NavItem eventKey={2} href="#" componentClass="span">
               <Link to="/grid">Grid</Link>
             </NavItem>
+            <NavItem eventKey={2} href="#" componentClass="span">
+              <Link to="/form">Form</Link>
+            </NavItem>
+            <NavItem eventKey={2} href="#" componentClass="span">
+              <Link to="/form2">Form2</Link>
+            </NavItem>
             <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+              {/* *******************4 agregar nueva ruta ********************** */}
               <MenuItem eventKey={3.1} componentClass="span"><Link to="/">Home</Link></MenuItem>
               <MenuItem eventKey={3.2} componentClass="span"><Link to="/grid">Grid</Link></MenuItem>
+              <MenuItem eventKey={3.2} componentClass="span"><Link to="/form">Form</Link></MenuItem>
+              {/* *******************4 agregar nueva ruta ********************** */}
             </NavDropdown>
           </Nav>
           <Nav pullRight={true}>

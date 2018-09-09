@@ -48,6 +48,14 @@ html, body, #app, #app>div {
     white-space: nowrap;
 }
 
-.enviaralfondo {
-  z-index: -1;
+/* .enviaralfondo {
+   z-index: 100;
+} */
+
+.traeralfrente {
+  z-index: 100;
 }
+
+/* form{
+  position: relative;
+} */

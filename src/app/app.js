@@ -11,14 +11,18 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 
 
-// ************** 1 IMPORTAR OBJETOS A CARGAR EN LA PAGINA ************ //
+// ************** 1 IMPORTAR COMPONENTES A CARGAR EN LA PAGINA ************ //
 // Para el manejo del menu:
 import {Menu} from './menu';
 import {Homevi} from './components/home/homevi';
 import {Homevd} from './components/home/homevd';
 import {Gridvi} from './components/grid/gridvi';
 import {Gridvd} from './components/grid/gridvd';
-const Pie = () => <h2>Pie</h2>;
+import {Formvi} from './components/form/formvi';
+import {Formvd} from './components/form/formvd';
+import {Form2vi} from './components/form2/form2vi';
+import {Form2vd} from './components/form2/form2vd';
+const Pie = () => <h2>Pie2</h2>;
 // ************************************************ ******************* //
 
 
@@ -36,8 +40,8 @@ class Template extends Component {
 
       return (<div className="marco externo">
         <Grid className="marco border">
-          <Row className="menu border">
-            <Col className="marco border" xs={12} md={12}>
+          <Row className="menu border traeralfrente">
+            <Col className="marco border traeralfrente" xs={12} md={12}>
               <Menu />
             </Col>
           </Row>
@@ -63,17 +67,22 @@ class Template extends Component {
   class App extends Component {
     render() {
 
-// ************ 2 MAPEO DE OBJETOS A VARIABLES ********************** //
+// ************ 2 MAPEO DE COMPONENTES  A VARIABLES ********************** //
      const propsHome = {vi: Homevi, vd: Homevd};
      const propsGrid = {vi: Gridvi, vd: Gridvd};
-
+     const propsForm = {vi: Formvi, vd: Formvd};
+     const propsForm2 = {vi: Form2vi, vd: Form2vd};
 // ****************************************************************** //
 
       return (
       <Router history={history}>
         <div>
+          {/* *******************3 mapeo de variables a ruta********************** */}
           <Route exact path="/" render={() => ( <Template {...propsHome} />)} />
           <Route exact path="/grid" render={() => ( <Template {...propsGrid} />)} />
+          <Route exact path="/form" render={() => ( <Template {...propsForm} />)} />
+          <Route exact path="/form2" render={() => ( <Template {...propsForm2} />)} />
+          {/* ******************AGREGAR NUEVA DIRECCION A MENU*********************** */}
         </div>
       </Router>);
     }
