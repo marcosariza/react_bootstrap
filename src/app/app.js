@@ -16,8 +16,8 @@ import createMemoryHistory from 'history/createMemoryHistory';
 import {Menu} from './menu';
 import {Homevi} from './components/home/homevi';
 import {Homevd} from './components/home/homevd';
-import {Gridvi} from './components/grid/gridvi';
-import {Gridvd} from './components/grid/gridvd';
+import Gridvi from './components/grid/gridvi';  //Cambia la forma del import debido a que se usa default
+import Gridvd from './components/grid/gridvd';  //Cambia la forma del import debido a que se usa default
 import {Formvi} from './components/form/formvi';
 import {Formvd} from './components/form/formvd';
 import {Form2vi} from './components/form2/form2vi';

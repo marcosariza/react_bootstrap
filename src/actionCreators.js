@@ -1,4 +1,5 @@
 const  poblarTabla = (productos) => {
+
   productos = [
     {
       id: '123',
@@ -11,6 +12,7 @@ const  poblarTabla = (productos) => {
     }
   ];
 
+
   return {
       type : "POBLAR_TABLA",
       products: productos
@@ -19,4 +21,14 @@ const  poblarTabla = (productos) => {
 };
 
 
-export {poblarTabla};
+const  agregarProducto = (singleProduct) => {
+  return {
+      type : "AGREGAR_PRODUCTO",
+      singleProduct: singleProduct
+  };
+
+};
+
+
+
+export {poblarTabla, agregarProducto};

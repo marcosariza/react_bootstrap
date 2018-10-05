@@ -8,7 +8,7 @@ class Homevd extends Component {
 
   render() {
     return (<div className="App">
-      <h2>Ventana Derecha</h2>
+      <h2>Ventana Derecha2</h2>
     </div>)
   }
 }
