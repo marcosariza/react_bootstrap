@@ -8,8 +8,16 @@ import {Router, Route, IndexRoute, Link} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import createMemoryHistory from 'history/createMemoryHistory';
 
+// CCS:
+import './css/index.css';
+import './css/react-bootstrap-table2.css';
+import './css/react-input-calendar.css';
 
+// SCSS:
+import './scss/consolidado.scss';
 
+// Imagenes:
+import './img/tux.jpg';
 
 // ************** 1 IMPORTAR COMPONENTES A CARGAR EN LA PAGINA ************ //
 // Para el manejo del menu:
